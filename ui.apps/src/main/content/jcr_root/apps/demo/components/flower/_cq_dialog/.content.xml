@@ -33,9 +33,32 @@
                                 name="./flowerDescription"/>
                         </items>
                     </details>
+                    <tab2
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="[tab2properties]"
+                        sling:resourceType="[granite/ui/components/coral/foundation/container]">
+                        <items jcr:primaryType="nt:unstructured">
+                            <details
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Flower Details"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <flowerprice
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Flowerprice"
+                                        name="./flowerprice"/>
+                                    <flowerseason
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Flowerseason"
+                                        name="./flowerseason"/>
+                                </items>
+                            </details>
+                        </items>
+                    </tab2>
                 </items>
             </tabs>
         </items>
     </content>
-    <content.xml/>
 </jcr:root>

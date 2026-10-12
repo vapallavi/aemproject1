@@ -2,13 +2,19 @@
 <div class="flower-component"
      data-sly-use.flower="com.adobe.aem.guides.demo.core.models.FlowerModel">
 
-    <h2>${flower.flowerName}</h2>
+    <img class="flower-component__image"
+         src="/etc.clientlibs/demo/clientlibs/clientlib-site/resources/images/flower.svg"
+         alt="Illustration of a pink flower"
+         loading="lazy"/>
 
-    <p>
-        <strong>Color:</strong>
-        ${flower.flowerColor}
-    </p>
+    <div class="flower-component__details">
+        <h2>${flower.flowerName}</h2>
 
-    <p>${flower.flowerDescription}</p>
+        <p>
+            <strong>Color:</strong>
+            ${flower.flowerColor}
+        </p>
 
+        <p>${flower.flowerDescription}</p>
+    </div>
 </div>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title">
+  <title id="title">Illustration of a pink flower</title>
+  <defs>
+    <radialGradient id="petal" cx="50%" cy="45%" r="55%">
+      <stop offset="0" stop-color="#fff4c2"/>
+      <stop offset="1" stop-color="#e85d8f"/>
+    </radialGradient>
+    <linearGradient id="leaf" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#91c788"/>
+      <stop offset="1" stop-color="#397b58"/>
+    </linearGradient>
+  </defs>
+  <circle cx="160" cy="160" r="150" fill="#fff5ec"/>
+  <path d="M160 165c-4 52-6 91-4 124" fill="none" stroke="#397b58" stroke-linecap="round" stroke-width="12"/>
+  <path d="M155 231c-36-34-62-17-67-4 23 24 43 28 67 4Z" fill="url(#leaf)"/>
+  <path d="M157 263c30-34 56-22 65-8-19 24-42 31-65 8Z" fill="url(#leaf)"/>
+  <g fill="url(#petal)" stroke="#d84e7d" stroke-width="2">
+    <ellipse cx="160" cy="99" rx="25" ry="48"/>
+    <ellipse cx="160" cy="99" rx="25" ry="48" transform="rotate(45 160 145)"/>
+    <ellipse cx="160" cy="99" rx="25" ry="48" transform="rotate(90 160 145)"/>
+    <ellipse cx="160" cy="99" rx="25" ry="48" transform="rotate(135 160 145)"/>
+    <ellipse cx="160" cy="99" rx="25" ry="48" transform="rotate(180 160 145)"/>
+    <ellipse cx="160" cy="99" rx="25" ry="48" transform="rotate(225 160 145)"/>
+    <ellipse cx="160" cy="99" rx="25" ry="48" transform="rotate(270 160 145)"/>
+    <ellipse cx="160" cy="99" rx="25" ry="48" transform="rotate(315 160 145)"/>
+  </g>
+  <circle cx="160" cy="145" r="31" fill="#f3b53f" stroke="#d58b24" stroke-width="4"/>
+  <circle cx="150" cy="137" r="3" fill="#a35b25"/>
+  <circle cx="166" cy="134" r="3" fill="#a35b25"/>
+  <circle cx="172" cy="151" r="3" fill="#a35b25"/>
+  <circle cx="153" cy="158" r="3" fill="#a35b25"/>
+</svg>
