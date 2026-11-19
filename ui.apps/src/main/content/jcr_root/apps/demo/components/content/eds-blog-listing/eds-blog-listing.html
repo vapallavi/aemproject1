@@ -1,0 +1,78 @@
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.css @ categories='demo.edsblog'}"/>
+
+<div data-sly-use.model="com.adobe.aem.guides.demo.core.models.EdsBlogListingModel"
+     class="pallavi-blog-listing">
+
+    <!-- Blog Count -->
+    <p class="pallavi-blog-count"
+       data-sly-test="${model.cards.size > 0}">
+        ${model.itemCountLabel}
+    </p>
+
+    <!-- Blog Cards Grid -->
+    <div class="pallavi-blog-grid"
+         data-sly-test="${model.cards.size > 0}">
+
+        <sly data-sly-list.card="${model.cards}">
+
+            <article class="pallavi-blog-card">
+
+                <!-- Blog Image -->
+                <a class="pallavi-blog-image-link"
+                   data-sly-test="${card.link}"
+                   href="${card.link @ context='uri'}"
+                   aria-label="${card.title}">
+
+                    <img data-sly-test="${card.heroImage}"
+                         class="pallavi-blog-image"
+                         src="${card.heroImage @ context='uri'}"
+                         alt="${card.imageAlt}"
+                         loading="lazy"/>
+
+                </a>
+
+                <!-- Blog Content -->
+                <div class="pallavi-blog-content">
+
+                    <!-- Blog Title -->
+                    <h2 class="pallavi-blog-title"
+                        data-sly-test="${card.title}">
+                        ${card.title}
+                    </h2>
+
+                    <!-- Publish Date -->
+                    <p class="pallavi-blog-date"
+                       data-sly-test="${card.formattedDate}">
+                        ${card.formattedDate}
+                    </p>
+
+                    <!-- Blog Summary -->
+                    <p class="pallavi-blog-summary"
+                       data-sly-test="${card.summary}">
+                        ${card.summary}
+                    </p>
+
+                    <!-- Read Article -->
+                    <a class="pallavi-blog-read"
+                       data-sly-test="${card.link}"
+                       href="${card.link @ context='uri'}">
+                        Read article →
+                    </a>
+
+                </div>
+
+            </article>
+
+        </sly>
+
+    </div>
+
+    <!-- Empty Message -->
+    <p class="pallavi-blog-empty"
+       data-sly-test="${model.cards.size == 0}">
+        No articles found.
+    </p>
+
+</div>

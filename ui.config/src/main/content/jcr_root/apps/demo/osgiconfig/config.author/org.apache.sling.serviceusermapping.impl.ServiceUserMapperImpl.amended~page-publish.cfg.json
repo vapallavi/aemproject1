@@ -1,0 +1,6 @@
+
+{
+  "user.mapping": [
+    "aem-guides-demo.core:page-publish-service=[page-publish-service]"
+  ]
+}

@@ -1,0 +1,86 @@
+<section class="employee-component"
+         data-sly-use.employeeModel="com.adobe.aem.guides.demo.core.models.EmployeeModel">
+
+    <!-- Employee Details -->
+    <section class="employee-component__card"
+             data-sly-test="${employeeModel.employees}">
+
+        <h2 class="employee-component__title">
+            Employee Details
+        </h2>
+
+        <article class="employee-component__entry"
+                 data-sly-list.employee="${employeeModel.employees}">
+
+            <dl class="employee-component__fields">
+
+                <div class="employee-component__field"
+                     data-sly-test="${employee.employeeName}">
+                    <dt>Employee Name</dt>
+                    <dd>${employee.employeeName}</dd>
+                </div>
+
+                <div class="employee-component__field"
+                     data-sly-test="${employee.employeeId != null}">
+                    <dt>Employee ID</dt>
+                    <dd>${employee.employeeId}</dd>
+                </div>
+
+                <div class="employee-component__field"
+                     data-sly-test="${employee.designation}">
+                    <dt>Designation</dt>
+                    <dd>${employee.designation}</dd>
+                </div>
+
+                <div class="employee-component__field"
+                     data-sly-test="${employee.department}">
+                    <dt>Department</dt>
+                    <dd>${employee.department}</dd>
+                </div>
+
+                <div class="employee-component__field employee-component__field--last employee-component__field--email"
+                     data-sly-test="${employee.email}">
+                    <dt>Email</dt>
+                    <dd>${employee.email}</dd>
+                </div>
+
+            </dl>
+        </article>
+    </section>
+
+    <!-- Salary Details -->
+    <section class="employee-component__card"
+             data-sly-test="${employeeModel.salaryDetails}">
+
+        <h2 class="employee-component__title">
+            Salary Details
+        </h2>
+
+        <article class="employee-component__entry"
+                 data-sly-list.salary="${employeeModel.salaryDetails}">
+
+            <dl class="employee-component__fields">
+
+                <div class="employee-component__field employee-component__field--salary"
+                     data-sly-test="${salary.salaryAmount != null}">
+
+                    <dt>Salary</dt>
+
+                    <dd>
+                        ${salary.currency}
+                        <span>${salary.salaryAmount}</span>
+                    </dd>
+                </div>
+
+                <div class="employee-component__field employee-component__field--last"
+                     data-sly-test="${salary.effectiveDate}">
+
+                    <dt>Effective Date</dt>
+                    <dd>${salary.effectiveDate}</dd>
+                </div>
+
+            </dl>
+        </article>
+    </section>
+
+</section>

@@ -1,0 +1,369 @@
+/* =====================================
+   HOUSE OF FLOWERS - SIDEBAR THEME
+===================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500&display=swap");
+
+.zav-sidebar-component,
+.zav-sidebar-component * {
+    box-sizing: border-box;
+}
+
+.zav-sidebar-component {
+    --flower-bg: #fbf9f7;
+    --flower-white: #ffffff;
+    --flower-plum: #65305e;
+    --flower-purple: #89518a;
+    --flower-orange: #f2a044;
+    --flower-text: #292329;
+    --flower-muted: #8c818b;
+    --flower-border: #eee5eb;
+    font-family: Jost, "Helvetica Neue", Arial, sans-serif;
+}
+
+.zav-menu-toggle {
+    position: fixed;
+    top: 12px;
+    left: 48px;
+    z-index: 1002;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid var(--flower-border);
+    border-radius: 50%;
+    background: var(--flower-white);
+    color: var(--flower-plum);
+    cursor: pointer;
+    box-shadow: 0 3px 15px rgba(60, 30, 50, 0.08);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.zav-menu-toggle-bars {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 18px;
+}
+
+.zav-menu-toggle-bars span {
+    display: block;
+    width: 18px;
+    height: 1.5px;
+    background: currentColor;
+    border-radius: 2px;
+}
+
+.zav-menu-toggle:hover,
+.zav-menu-toggle:focus-visible {
+    background: var(--flower-plum);
+    color: var(--flower-white);
+    border-color: var(--flower-plum);
+    outline: none;
+}
+
+.zav-sidebar-component .zav-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1004;
+    display: block;
+    width: 320px;
+    max-width: 85vw;
+    height: 100vh;
+    padding: 32px 28px 40px;
+    background: var(--flower-bg);
+    color: var(--flower-text);
+    border-right: 1px solid var(--flower-border);
+    border-radius: 0 12px 12px 0;
+    box-shadow: 12px 0 40px rgba(50, 25, 45, 0.12);
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform: translateX(-105%);
+    visibility: hidden;
+    transition: transform 0.4s ease, visibility 0.4s ease;
+}
+
+.zav-sidebar-component.is-open .zav-sidebar {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+.zav-sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1003;
+    background: rgba(30, 20, 30, 0.45);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.zav-sidebar-component.is-open .zav-sidebar-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.zav-sidebar-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 24px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--flower-border);
+    background: transparent;
+}
+
+.zav-sidebar-logo {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    color: var(--flower-plum);
+    text-decoration: none;
+    font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.zav-sidebar-logo img {
+    display: block;
+    width: auto;
+    max-width: 148px;
+    max-height: 56px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+.zav-sidebar-logo-text {
+    display: block;
+    white-space: nowrap;
+}
+
+.zav-sidebar-close {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border: 1px solid var(--flower-border);
+    border-radius: 50%;
+    background: var(--flower-white);
+    color: var(--flower-plum);
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.zav-sidebar-close:hover,
+.zav-sidebar-close:focus-visible {
+    background: var(--flower-plum);
+    color: var(--flower-white);
+    transform: rotate(90deg);
+    outline: none;
+}
+
+.zav-sidebar-component .zav-sidebar-header-links {
+    display: block !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 12px 0 8px;
+    padding: 0;
+    list-style: none;
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+.zav-sidebar-component .zav-sidebar-link {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    gap: 14px;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 auto !important;
+    float: none !important;
+    margin: 0;
+    padding: 14px 4px;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--flower-text);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    line-height: 1.4;
+    transition: background-color 0.3s ease, color 0.3s ease, padding-left 0.3s ease;
+}
+
+.zav-sidebar-component .zav-sidebar-link img {
+    width: 22px;
+    height: 22px;
+    flex: 0 0 22px;
+    object-fit: contain;
+    background: transparent;
+}
+
+.zav-sidebar-component .zav-sidebar-link span {
+    flex: 1 1 auto;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.zav-sidebar-component .zav-sidebar-link:hover,
+.zav-sidebar-component .zav-sidebar-link:focus-within {
+    background: #f1e8f0;
+    color: var(--flower-plum);
+    padding-left: 10px;
+}
+
+.zav-sidebar-component .zav-sidebar-navigation {
+    display: block !important;
+    width: 100%;
+    margin: 8px 0 0;
+    padding: 0;
+    background: transparent;
+}
+
+.zav-sidebar-component .zav-sidebar-navigation-item {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: flex-start;
+    gap: 14px;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0;
+    padding: 16px 4px;
+    border: 0;
+    border-bottom: 1px solid var(--flower-border);
+    background: transparent;
+}
+
+.zav-sidebar-component .zav-sidebar-navigation-item img {
+    width: 22px;
+    height: 22px;
+    flex: 0 0 22px;
+    margin-top: 2px;
+    object-fit: contain;
+    background: transparent;
+}
+
+.zav-sidebar-component .zav-sidebar-sub-links {
+    display: block !important;
+    flex: 1 1 auto;
+    min-width: 0;
+    width: auto;
+}
+
+.zav-sidebar-component .zav-sidebar-sub-links a {
+    display: block !important;
+    width: 100%;
+    padding: 4px 0;
+    color: var(--flower-text);
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.zav-sidebar-component .zav-sidebar-sub-links a:hover,
+.zav-sidebar-component .zav-sidebar-sub-links a:focus-visible {
+    color: var(--flower-purple);
+    padding-left: 6px;
+    outline: none;
+}
+
+.zav-sidebar-component .zav-sidebar-region {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    margin-top: 28px;
+    padding: 14px 16px;
+    border: 1px solid var(--flower-border);
+    border-top: 2px solid var(--flower-orange);
+    border-radius: 8px;
+    background: var(--flower-white);
+    color: var(--flower-plum);
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
+.zav-sidebar-component .zav-sidebar-region strong {
+    color: var(--flower-text);
+    font-weight: 500;
+    text-transform: none;
+    white-space: nowrap;
+}
+
+.zav-sidebar-component.is-open .zav-menu-toggle {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.zav-desktop-icon {
+    display: block;
+}
+
+.zav-mobile-icon {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .zav-sidebar-component .zav-sidebar {
+        width: 285px;
+        padding: 24px 20px 32px;
+    }
+
+    .zav-menu-toggle {
+        top: 15px;
+        left: 15px;
+    }
+
+    .zav-desktop-icon {
+        display: none;
+    }
+
+    .zav-mobile-icon {
+        display: block;
+    }
+
+    img.zav-desktop-icon:only-of-type {
+        display: block;
+    }
+
+    .zav-sidebar-logo {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+    .zav-sidebar-component .zav-sidebar-link,
+    .zav-sidebar-component .zav-sidebar-sub-links a {
+        min-height: 44px;
+    }
+}

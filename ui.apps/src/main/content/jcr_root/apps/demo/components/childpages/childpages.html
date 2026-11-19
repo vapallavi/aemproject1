@@ -1,0 +1,12 @@
+<div class="cmp-childpages" data-sly-use.model="com.adobe.aem.guides.demo.core.models.ChildPagesModel">
+    <ul data-sly-list.item="${model.pages}" data-sly-test="${model.pages.size > 0}">
+        <li>
+            <a href="${item.url @ context='uri'}">${item.title}</a>
+            <span>${item.path}</span>
+        </li>
+    </ul>
+
+    <p data-sly-test="${!model.parentPageConfigured}">No parent page selected in dialog.</p>
+    <p data-sly-test="${model.parentPageConfigured && !model.parentPageFound}">Parent page not found.</p>
+    <p data-sly-test="${model.parentPageFound && model.pages.size == 0}">No child pages found.</p>
+</div>

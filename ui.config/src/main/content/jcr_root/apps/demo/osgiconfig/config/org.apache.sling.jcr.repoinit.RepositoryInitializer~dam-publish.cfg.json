@@ -1,0 +1,5 @@
+{
+  "scripts": [
+    "delete user dam-publish-service\ncreate service user dam-publish-service with path system/cq:services/demo\nset ACL for dam-publish-service\n  allow jcr:all,crx:replicate on /content/dam\nend"
+  ]
+}

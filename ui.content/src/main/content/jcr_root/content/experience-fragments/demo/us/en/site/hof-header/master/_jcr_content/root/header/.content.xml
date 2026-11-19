@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="houseofflowers/components/header"
+    logoText="House of Flowers"
+    logoAlt="House of Flowers"
+    logoLink="/content/demo/us/en/house-of-flowers">
+    <navItems jcr:primaryType="nt:unstructured">
+        <item0
+            jcr:primaryType="nt:unstructured"
+            label="Shop"
+            link="/content/demo/us/en/house-of-flowers/shop"
+            opensMegaMenu="{Boolean}false"/>
+        <item1
+            jcr:primaryType="nt:unstructured"
+            label="Collections"
+            link="/content/demo/us/en/house-of-flowers/collections"
+            opensMegaMenu="{Boolean}false"/>
+        <item2
+            jcr:primaryType="nt:unstructured"
+            label="About"
+            link="/content/demo/us/en/house-of-flowers/about"
+            opensMegaMenu="{Boolean}true"
+            introHeadline="Our atelier"
+            introText="House of Flowers is a vibrant atelier of master florists. We share a love of blooms and a passion for creating moments of beauty."
+            introCtaLabel="Discover our atelier"
+            introCtaLink="/content/demo/us/en/house-of-flowers/about"
+            featuredHeading="Featured Content">
+            <megaColumns jcr:primaryType="nt:unstructured">
+                <item0
+                    jcr:primaryType="nt:unstructured"
+                    heading="About Us">
+                    <links jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" label="Our Story" link="/content/demo/us/en/house-of-flowers/about"/>
+                        <item1 jcr:primaryType="nt:unstructured" label="The Atelier" link="/content/demo/us/en/house-of-flowers/about"/>
+                        <item2 jcr:primaryType="nt:unstructured" label="Master Florists" link="/content/demo/us/en/house-of-flowers/about"/>
+                        <item3 jcr:primaryType="nt:unstructured" label="Studios &amp; Locations" link="/content/demo/us/en/house-of-flowers/contact"/>
+                    </links>
+                </item0>
+                <item1
+                    jcr:primaryType="nt:unstructured"
+                    heading="Our Craft">
+                    <links jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" label="Seasonal Collections" link="/content/demo/us/en/house-of-flowers/collections"/>
+                        <item1 jcr:primaryType="nt:unstructured" label="Wedding Design" link="/content/demo/us/en/house-of-flowers/occasions"/>
+                        <item2 jcr:primaryType="nt:unstructured" label="Private Events" link="/content/demo/us/en/house-of-flowers/occasions"/>
+                        <item3 jcr:primaryType="nt:unstructured" label="Care Guide" link="/content/demo/us/en/house-of-flowers/collections"/>
+                    </links>
+                </item1>
+                <item2
+                    jcr:primaryType="nt:unstructured"
+                    heading="Our Promise">
+                    <links jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" label="Sustainability Statement" link="/content/demo/us/en/house-of-flowers/sustainability"/>
+                        <item1 jcr:primaryType="nt:unstructured" label="Ethical Sourcing" link="/content/demo/us/en/house-of-flowers/sustainability"/>
+                        <item2 jcr:primaryType="nt:unstructured" label="Composting Program" link="/content/demo/us/en/house-of-flowers/sustainability"/>
+                        <item3 jcr:primaryType="nt:unstructured" label="Community Gardens" link="/content/demo/us/en/house-of-flowers/sustainability"/>
+                    </links>
+                </item2>
+            </megaColumns>
+            <featuredCards jcr:primaryType="nt:unstructured">
+                <item0
+                    jcr:primaryType="nt:unstructured"
+                    title="Seasonal Collections"
+                    image="/etc.clientlibs/houseofflowers/components/header/clientlibs/resources/featured/seasonal.jpg"
+                    link="/content/demo/us/en/house-of-flowers/collections"
+                    label="Collection"
+                    alt="Abundant seasonal bouquet of burgundy dahlias and blush roses"/>
+                <item1
+                    jcr:primaryType="nt:unstructured"
+                    title="Our Story"
+                    image="/etc.clientlibs/houseofflowers/components/header/clientlibs/resources/featured/story.jpg"
+                    link="/content/demo/us/en/house-of-flowers/about"
+                    label="Story"
+                    alt="Florist atelier workbench with ribbons, shears, and roses"/>
+                <item2
+                    jcr:primaryType="nt:unstructured"
+                    title="Sustainability Statement"
+                    image="/etc.clientlibs/houseofflowers/components/header/clientlibs/resources/featured/sustainability.jpg"
+                    link="/content/demo/us/en/house-of-flowers/sustainability"
+                    label="Promise"
+                    alt="Cutting garden of peonies, sage, and lavender at golden hour"/>
+            </featuredCards>
+        </item2>
+        <item3
+            jcr:primaryType="nt:unstructured"
+            label="Sustainability"
+            link="/content/demo/us/en/house-of-flowers/sustainability"
+            opensMegaMenu="{Boolean}false"/>
+        <item4
+            jcr:primaryType="nt:unstructured"
+            label="Occasions"
+            link="/content/demo/us/en/house-of-flowers/occasions"
+            opensMegaMenu="{Boolean}false"/>
+        <item5
+            jcr:primaryType="nt:unstructured"
+            label="Contact"
+            link="/content/demo/us/en/house-of-flowers/contact"
+            opensMegaMenu="{Boolean}false"/>
+    </navItems>
+</jcr:root>

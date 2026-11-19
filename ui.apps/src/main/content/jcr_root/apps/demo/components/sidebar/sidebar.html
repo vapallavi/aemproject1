@@ -1,0 +1,91 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='demo.sidebar'}"></sly>
+
+<sly data-sly-use.sidebar="com.adobe.aem.guides.demo.core.models.SidebarModel">
+
+    <sly data-sly-test="${sidebar.enableSwitch}">
+        <div class="zav-sidebar-component">
+
+            <button type="button"
+                    class="zav-menu-toggle"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                    aria-controls="zav-sidebar">
+                <span class="zav-menu-toggle-bars" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+
+            <div class="zav-sidebar-overlay"
+                 data-sidebar-overlay
+                 aria-hidden="true"></div>
+
+            <aside id="zav-sidebar"
+                   class="zav-sidebar"
+                   aria-hidden="true"
+                   aria-label="House of Flowers menu">
+
+                <div class="zav-sidebar-top">
+                    <a class="zav-sidebar-logo"
+                       href="${sidebar.logoLink}">
+                        <img class="zav-desktop-icon"
+                             data-sly-test="${sidebar.logoPath}"
+                             src="${sidebar.logoPath}"
+                             alt="House of Flowers">
+                        <img class="zav-mobile-icon"
+                             data-sly-test="${sidebar.logoMobileImage}"
+                             src="${sidebar.logoMobileImage}"
+                             alt="House of Flowers">
+                        <span class="zav-sidebar-logo-text"
+                              data-sly-test="${!sidebar.logoPath && !sidebar.logoMobileImage}">HOUSE of FLOWERS</span>
+                    </a>
+
+                    <button type="button"
+                            class="zav-sidebar-close"
+                            aria-label="Close menu">
+                        &times;
+                    </button>
+                </div>
+
+                <div class="zav-sidebar-header-links" data-sly-test="${sidebar.headerLinks}">
+                    <div class="zav-sidebar-link" data-sly-repeat.link="${sidebar.headerLinks}">
+                        <img data-sly-test="${link.image}"
+                             src="${link.image}"
+                             alt="">
+                        <span>${link.name}</span>
+                    </div>
+                </div>
+
+                <nav class="zav-sidebar-navigation"
+                     aria-label="Primary"
+                     data-sly-test="${sidebar.sidebarNavigation}">
+                    <div class="zav-sidebar-navigation-item"
+                         data-sly-repeat.navigation="${sidebar.sidebarNavigation}">
+                        <img class="zav-desktop-icon"
+                             data-sly-test="${navigation.desktopIcon}"
+                             src="${navigation.desktopIcon}"
+                             alt="">
+                        <img class="zav-mobile-icon"
+                             data-sly-test="${navigation.mobileIcon}"
+                             src="${navigation.mobileIcon}"
+                             alt="">
+                        <div class="zav-sidebar-sub-links">
+                            <a data-sly-repeat.navLink="${navigation.navigationLinks}"
+                               href="${navLink.navigationURL}">${navLink.title}</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="zav-sidebar-region" data-sly-test="${sidebar.country}">
+                    <span>Region</span>
+                    <strong data-sly-test="${sidebar.countryLabel}">${sidebar.countryLabel}</strong>
+                    <strong data-sly-test="${!sidebar.countryLabel}">${sidebar.country}</strong>
+                </div>
+
+            </aside>
+        </div>
+    </sly>
+
+</sly>

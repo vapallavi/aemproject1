@@ -1,0 +1,39 @@
+
+
+<article class="student-details"
+         style="border-top: 4px solid ${properties.cardColor @ context='styleString'}">
+    <header class="student-details__header">
+        <div>
+            <p class="student-details__eyebrow">Student Profile</p>
+            <h2>${properties.studentName || 'Student Details'}</h2>
+        </div>
+        <img data-sly-test="${properties.studentImage}"
+             class="student-details__image"
+             src="${properties.studentImage}"
+             alt="${properties.studentName ? properties.studentName : 'Student'}"
+             loading="lazy"/>
+    </header>
+
+    <dl class="student-details__list">
+        <div data-sly-test="${properties.studentId}">
+            <dt>Student ID</dt>
+            <dd>${properties.studentId}</dd>
+        </div>
+        <div data-sly-test="${properties.course}">
+            <dt>Course</dt>
+            <dd>${properties.course}</dd>
+        </div>
+        <div data-sly-test="${properties.dateOfBirth}">
+            <dt>Date of Birth</dt>
+            <dd>${properties.dateOfBirth}</dd>
+        </div>
+        <div data-sly-test="${properties.currentlyStudying == 'true'}">
+            <dt>Enrollment</dt>
+            <dd>Currently studying</dd>
+        </div>
+        <div data-sly-test="${properties.currentlyStudying != 'true'}">
+            <dt>Enrollment</dt>
+            <dd>Not currently studying</dd>
+        </div>
+    </dl>
+</article>

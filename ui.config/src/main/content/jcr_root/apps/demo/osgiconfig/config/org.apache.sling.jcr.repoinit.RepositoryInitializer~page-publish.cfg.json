@@ -1,0 +1,5 @@
+{
+  "scripts": [
+    "create service user page-publish-service with path system/page-publish-service\ncreate path (sling:Folder) /content/page-publish\nset ACL for page-publish-service\n  allow jcr:read,jcr:modifyProperties,jcr:nodeTypeManagement,crx:replicate on /content\nend"
+  ]
+}

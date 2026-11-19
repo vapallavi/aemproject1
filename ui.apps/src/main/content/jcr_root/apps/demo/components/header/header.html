@@ -1,0 +1,137 @@
+<!--/*
+    House of Flowers mega-menu header.
+    Renders only authored dialog data. Empty values are omitted.
+*/-->
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='houseofflowers.header'}"></sly>
+<sly data-sly-use.model="com.adobe.aem.guides.demo.core.models.HeaderModel"/>
+
+<div class="cq-placeholder hof-header__placeholder"
+     data-sly-test="${!model.configured}"
+     data-emptytext="House of Flowers Header"></div>
+
+<header class="hof-header"
+        data-sly-test="${model.configured}"
+        data-hof-header="true"
+        aria-label="${model.logoText || 'Site'}">
+    <a class="hof-header__skip" href="#${model.navId}">Skip to navigation</a>
+    <div class="hof-header__bar">
+        <div class="hof-header__inner">
+            <button type="button"
+                    class="hof-header__menu-toggle"
+                    data-sly-test="${model.hasNav}"
+                    data-hof-menu-toggle
+                    aria-expanded="false"
+                    aria-controls="${model.navId}"
+                    aria-label="Open menu">
+                <svg class="hof-header__icon-open" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M4.5 7h15M4.5 12h15M4.5 17h15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+                <svg class="hof-header__icon-close" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M6.5 6.5l11 11M17.5 6.5l-11 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+            </button>
+
+            <a class="hof-header__brand"
+               data-sly-test="${model.hasLogo}"
+               data-sly-element="${model.logoLink ? 'a' : 'span'}"
+               data-sly-attribute.href="${model.logoLink @ context='uri'}">
+                <span class="hof-header__mark" aria-hidden="true">
+                    <img data-sly-test="${model.logoImage}"
+                         class="hof-header__logo-image"
+                         src="${model.logoImage @ context='uri'}"
+                         alt=""/>
+                    <svg data-sly-test="${!model.logoImage}" viewBox="0 0 48 48" focusable="false">
+                        <circle cx="24" cy="24" r="22.5" fill="none" stroke="currentColor" stroke-width="1" opacity="0.55"/>
+                        <g fill="none" stroke="currentColor" stroke-width="1.35">
+                            <ellipse cx="24" cy="13.2" rx="3.5" ry="6.6"/>
+                            <ellipse cx="24" cy="13.2" rx="3.5" ry="6.6" transform="rotate(72 24 24)"/>
+                            <ellipse cx="24" cy="13.2" rx="3.5" ry="6.6" transform="rotate(144 24 24)"/>
+                            <ellipse cx="24" cy="13.2" rx="3.5" ry="6.6" transform="rotate(216 24 24)"/>
+                            <ellipse cx="24" cy="13.2" rx="3.5" ry="6.6" transform="rotate(288 24 24)"/>
+                        </g>
+                        <circle cx="24" cy="24" r="3" fill="currentColor" opacity="0.9"/>
+                    </svg>
+                </span>
+                <span class="hof-header__wordmark" data-sly-test="${model.logoText}">${model.logoText}</span>
+            </a>
+
+            <nav class="hof-header__nav"
+                 data-sly-test="${model.hasNav}"
+                 id="${model.navId}"
+                 aria-label="Primary"
+                 data-hof-nav>
+                <ul class="hof-header__menu" data-sly-list.item="${model.navItems}">
+                    <li class="hof-header__item ${item.megaMenu ? 'hof-header__item--mega' : ''}"
+                        data-sly-attribute.data-hof-mega-item="${item.megaMenu}">
+                        <sly data-sly-test="${!item.megaMenu}">
+                            <a class="hof-header__link" data-sly-attribute.href="${item.link @ context='uri'}">
+                                <span class="hof-header__anchor-label">${item.label}</span>
+                            </a>
+                        </sly>
+                        <sly data-sly-test="${item.megaMenu}">
+                            <button type="button"
+                                    class="hof-header__link hof-header__link--mega"
+                                    data-hof-mega-trigger
+                                    aria-expanded="false"
+                                    aria-haspopup="true"
+                                    aria-controls="${model.idPrefix}-mega-${itemList.index}">
+                                <span class="hof-header__anchor-label">${item.label}</span>
+                                <svg class="hof-header__caret-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                                    <path d="M4 6.2L8 10.2 12 6.2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <div class="hof-header__mega"
+                                 id="${model.idPrefix}-mega-${itemList.index}"
+                                 role="region"
+                                 aria-label="${item.label} menu"
+                                 aria-hidden="true">
+                                <div class="hof-header__mega-inner">
+                                    <div class="hof-header__intro" data-sly-test="${item.hasIntro}">
+                                        <p class="hof-header__intro-headline" data-sly-test="${item.introHeadline}">${item.introHeadline}</p>
+                                        <p class="hof-header__intro-text" data-sly-test="${item.introText}">${item.introText}</p>
+                                        <a class="hof-header__intro-cta"
+                                           data-sly-test="${item.introCtaLabel}"
+                                           data-sly-attribute.href="${item.introCtaLink @ context='uri'}">
+                                            <span>${item.introCtaLabel}</span>
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                                <path d="M5 12h12M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="hof-header__columns" data-sly-test="${item.hasSections}">
+                                        <div class="hof-header__column" data-sly-list.column="${item.megaColumns}">
+                                            <h3 class="hof-header__column-title" data-sly-test="${column.heading}">${column.heading}</h3>
+                                            <ul class="hof-header__column-list" data-sly-list.link="${column.links}">
+                                                <li>
+                                                    <a class="hof-header__column-link" data-sly-attribute.href="${link.link @ context='uri'}">${link.label}</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="hof-header__featured" data-sly-test="${item.hasFeatured}">
+                                        <h3 class="hof-header__featured-title" data-sly-test="${item.featuredHeading}">${item.featuredHeading}</h3>
+                                        <ul class="hof-header__featured-list" data-sly-list.card="${item.featuredCards}">
+                                            <li>
+                                                <a class="hof-header__card" data-sly-attribute.href="${card.link @ context='uri'}">
+                                                    <span class="hof-header__card-media" data-sly-test="${card.image}">
+                                                        <img src="${card.image @ context='uri'}"
+                                                             alt="${card.alt}"
+                                                             width="480"
+                                                             height="270"/>
+                                                    </span>
+                                                    <span class="hof-header__card-kicker" data-sly-test="${card.label}">${card.label}</span>
+                                                    <span class="hof-header__card-title" data-sly-test="${card.title}">${card.title}</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </sly>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>

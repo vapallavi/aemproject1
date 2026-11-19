@@ -1,0 +1,6 @@
+{
+  "user.mapping": [
+    "aem-guides-demo.core:expiry-service=[expiry-service]"
+  ],
+  "service.ranking:Integer": 100
+}

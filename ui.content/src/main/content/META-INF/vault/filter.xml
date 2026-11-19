@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
     <filter root="/conf/demo" mode="merge"/>
+    <filter root="/content/andrew" mode="merge"/>
     <filter root="/content/demo" mode="merge"/>
     <filter root="/content/dam/demo" mode="merge">
         <exclude pattern="/content/dam/demo(/.*)?"/>
@@ -8,4 +9,7 @@
     </filter>
     <filter root="/content/dam/demo/asset.jpg" mode="merge"/>
     <filter root="/content/experience-fragments/demo" mode="merge"/>
+    <filter root="/content/experience-fragments/demo/us/en/site/hof-header" mode="replace"/>
+    <filter root="/content/experience-fragments/houseofflower" mode="merge"/>
+    <filter root="/content/experience-fragments/houseofflower/us/en/site/header" mode="replace"/>
 </workspaceFilter>

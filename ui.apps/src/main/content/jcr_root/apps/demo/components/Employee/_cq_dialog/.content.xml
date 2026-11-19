@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Employee Data"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <employeeTab
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Employee Details"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <employee
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldDescription="Click Add to enter employee details"
+                                fieldLabel="Employee details">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./employee">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <Employeename
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="Enter the employee's full name"
+                                            fieldLabel="Employee Name"
+                                            name="Employeename"
+                                            required="{Boolean}true"/>
+                                        <Employeeid
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                            fieldLabel="Employee ID"
+                                            min="{Long}1"
+                                            name="Employeeid"/>
+                                        <Employeedesignation
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldLabel="Employee Designation"
+                                            name="Employeedesignation">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <developer
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Developer"
+                                                    value="Developer"/>
+                                                <tester
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Tester"
+                                                    value="Tester"/>
+                                                <sap
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="SAP"
+                                                    value="SAP"/>
+                                                <sqlDeveloper
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="SQL Developer"
+                                                    value="SQL Developer"/>
+                                            </items>
+                                        </Employeedesignation>
+                                        <Department
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldLabel="Department"
+                                            name="Department">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <engineering
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Engineering"
+                                                    value="Engineering"/>
+                                                <hr
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="HR"
+                                                    value="HR"/>
+                                                <development
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Development"
+                                                    value="Development"/>
+                                            </items>
+                                        </Department>
+                                        <Emailid
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Email"
+                                            name="Emailid"
+                                            required="{Boolean}true"/>
+                                    </items>
+                                </field>
+                            </employee>
+                        </items>
+                    </employeeTab>
+                    <salaryDetailsTab
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Salary Details"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <salaryDetails
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldDescription="Click Add to enter salary details"
+                                fieldLabel="Salary details">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./salaryDetails">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <salaryAmount
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                            fieldLabel="Salary Amount"
+                                            min="{Long}0"
+                                            name="salaryAmount"
+                                            required="{Boolean}true"
+                                            step="{Double}0.01"/>
+                                        <currency
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldLabel="Currency"
+                                            name="currency"
+                                            required="{Boolean}true">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <usd
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="USD"
+                                                    value="USD"/>
+                                                <eur
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="EUR"
+                                                    value="EUR"/>
+                                                <gbp
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="GBP"
+                                                    value="GBP"/>
+                                                <inr
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="INR"
+                                                    value="INR"/>
+                                            </items>
+                                        </currency>
+                                        <effectiveDate
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                            displayFormat="DD-MM-YYYY"
+                                            fieldLabel="Effective Date"
+                                            name="effectiveDate"
+                                            required="{Boolean}true"
+                                            type="date"
+                                            valueFormat="YYYY-MM-DD"/>
+                                    </items>
+                                </field>
+                            </salaryDetails>
+                        </items>
+                    </salaryDetailsTab>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,8 @@
+<div class="profiles">
+    <h3 data-sly-test="${properties.name}">${properties.name}</h3>
+
+    <img data-sly-test="${properties.image}"
+         src="${properties.image @ context='uri'}"
+         alt="${properties.name}"
+         width="300"/>
+</div>

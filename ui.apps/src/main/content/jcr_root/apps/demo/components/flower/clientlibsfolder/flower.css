@@ -1,0 +1,35 @@
+.flower-component
+{
+    background: #c8c8c8;
+   
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+.flower_card {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 250px;
+}
+
+.flower_name {
+    color: #e20020;
+    font-size: 24px;
+        background: #0d66d0;
+        width: fit-content;
+}
+
+.flower_color {
+    color: #333;
+    font-size: 16px;
+}
+
+.flower_price {
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+}

@@ -1,0 +1,6 @@
+{
+  "scheduler.expression": "0 0/5 * * * ?",
+  "pagePath": "/content/demo/us/en",
+  "enabled": true,
+  "scheduler.concurrent": false
+}

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Student Details"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <studentDetails
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <studentName
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Student Name"
+                        name="./studentName"
+                        required="{Boolean}true"/>
+                    <studentId
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                        fieldLabel="Student ID"
+                        min="{Long}1"
+                        name="./studentId"
+                        step="{Long}1"/>
+                    <currentlyStudying
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                        fieldLabel="Currently Studying"
+                        name="./currentlyStudying"
+                        text="Currently studying"
+                        uncheckedValue="false"
+                        value="true"/>
+                    <course
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Course"
+                        name="./course">
+                        <items jcr:primaryType="nt:unstructured">
+                            <computerScience
+                                jcr:primaryType="nt:unstructured"
+                                text="Computer Science"
+                                value="Computer Science"/>
+                            <engineering
+                                jcr:primaryType="nt:unstructured"
+                                text="Engineering"
+                                value="Engineering"/>
+                            <business
+                                jcr:primaryType="nt:unstructured"
+                                text="Business"
+                                value="Business"/>
+                            <arts
+                                jcr:primaryType="nt:unstructured"
+                                text="Arts"
+                                value="Arts"/>
+                            <other
+                                jcr:primaryType="nt:unstructured"
+                                text="Other"
+                                value="Other"/>
+                        </items>
+                    </course>
+                    <studentImage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Student Photo"
+                        name="./studentImage"
+                        rootPath="/content/dam"/>
+                    <cardColor
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"
+                        fieldLabel="Card Color"
+                        name="./cardColor"/>
+                    <dateOfBirth
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                        displayFormat="DD-MM-YYYY"
+                        fieldLabel="Date of Birth"
+                        name="./dateOfBirth"
+                        type="date"
+                        valueFormat="YYYY-MM-DD"/>
+                </items>
+            </studentDetails>
+        </items>
+    </content>
+</jcr:root>

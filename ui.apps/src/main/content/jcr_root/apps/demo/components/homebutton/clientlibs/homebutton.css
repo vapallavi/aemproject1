@@ -1,0 +1,14 @@
+.home-button {
+    background-color: grey;
+    color: white;
+    border: 1px solid grey;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: white;
+    color: grey;
+    border: 1px solid grey;
+}

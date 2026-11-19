@@ -1,0 +1,6 @@
+{
+  "scripts": [
+    "create service user dam-publish-service with path /home/users/system",
+    "set ACL for dam-publish-service\n allow jcr:read,crx:replicate on /content/dam\n end"
+  ]
+}

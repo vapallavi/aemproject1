@@ -1,0 +1,44 @@
+
+<sly data-sly-use.model="com.adobe.aem.guides.demo.core.models.Featureimagetext" />
+
+<div class="feature-image-text"
+     id="${model.id}"
+     data-sly-test="${model}">
+
+    <!-- Left: Feature image -->
+    <div class="feature-image-text__image">
+
+        <img data-sly-test="${model.usePageImage}"
+             src="${currentPage.properties.image.fileReference}"
+             alt="${model.alternatetext}"
+             class="feature-image-text__img" />
+
+        <img data-sly-test="${!model.usePageImage && model.assetPath}"
+             src="${model.assetPath}"
+             alt="${model.alternatetext}"
+             class="feature-image-text__img" />
+
+    </div>
+
+    <!-- Right: Heading, description and CTA -->
+    <div class="feature-image-text__content">
+
+        <h2 class="feature-image-text__heading"
+            data-sly-test="${model.heading}">
+            ${model.heading}
+        </h2>
+
+        <div class="feature-image-text__description"
+             data-sly-test="${model.description}">
+            ${model.description @ context='html'}
+        </div>
+
+        <a data-sly-test="${model.ctaValid}"
+           href="${model.ctalink}"
+           class="feature-image-text__cta">
+            ${model.ctatext}
+        </a>
+
+    </div>
+
+</div>

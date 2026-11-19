@@ -1,0 +1,30 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='demo.contactform'}"/>
+
+<div class="form-data-table" data-sly-use.table="com.adobe.aem.guides.demo.core.models.FormDataTableModel">
+  <h2 class="form-data-table__title">Form Data</h2>
+
+  <p class="form-data-table__empty" data-sly-test="${!table.formDataList}">No form submissions yet.</p>
+
+  <table data-sly-test="${table.formDataList}" border="1">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody data-sly-list.item="${table.formDataList}">
+      <tr>
+        <td>${item.name}</td>
+        <td>${item.email}</td>
+        <td>${item.mobile}</td>
+        <td>
+          <button type="button" onclick="editContact('${item.path @ context='scriptString'}')">Edit</button>
+          <button type="button" onclick="deleteContact('${item.path @ context='scriptString'}')">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

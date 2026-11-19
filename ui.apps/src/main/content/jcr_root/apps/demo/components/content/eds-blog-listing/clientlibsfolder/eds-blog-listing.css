@@ -1,0 +1,120 @@
+
+/* Main component */
+.pallavi-blog-listing {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #fff;
+    color: #333;
+}
+
+/* Blog count */
+.pallavi-blog-count {
+    font-size: 14px;
+    margin: 0 0 20px;
+    color: #333;
+}
+
+/* Blog grid */
+.pallavi-blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+    align-items: stretch;
+}
+
+/* Blog card */
+.pallavi-blog-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+/* Image */
+.pallavi-blog-image-link {
+    display: block;
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.pallavi-blog-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Content */
+.pallavi-blog-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 16px;
+    background: #fff;
+}
+
+/* Title */
+.pallavi-blog-title {
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 600;
+    color: #222;
+    margin: 0 0 12px;
+}
+
+/* Date */
+.pallavi-blog-date {
+    font-size: 13px;
+    color: #777;
+    margin: 0 0 12px;
+}
+
+/* Summary */
+.pallavi-blog-summary {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0 0 16px;
+}
+
+/* Read article */
+.pallavi-blog-read {
+    margin-top: auto;
+    color: #0066cc;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.pallavi-blog-read:hover {
+    text-decoration: underline;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .pallavi-blog-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .pallavi-blog-listing {
+        padding: 12px;
+    }
+
+    .pallavi-blog-grid {
+        grid-template-columns: 1fr;
+    }
+}

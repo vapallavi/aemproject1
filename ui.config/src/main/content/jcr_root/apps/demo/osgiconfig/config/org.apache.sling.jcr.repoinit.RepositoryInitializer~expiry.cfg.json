@@ -1,0 +1,5 @@
+{
+  "scripts": [
+    "create service user expiry-service with path system/cq:services/demo\nset ACL for expiry-service\n  allow jcr:read,crx:replicate,jcr:modifyProperties on /content\nend"
+  ]
+}

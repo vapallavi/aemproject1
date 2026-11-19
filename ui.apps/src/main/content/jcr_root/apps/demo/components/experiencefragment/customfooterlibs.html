@@ -1,0 +1,21 @@
+<!--/*
+  ~ ADOBE CONFIDENTIAL
+  ~ __________________
+  ~
+  ~ Copyright 2021 Adobe Systems Incorporated
+  ~ All Rights Reserved.
+  ~
+  ~ NOTICE:  All information contained herein is, and remains
+  ~ the property of Adobe Systems Incorporated and its suppliers,
+  ~ if any.  The intellectual and technical concepts contained
+  ~ herein are proprietary to Adobe Systems Incorporated and its
+  ~ suppliers and are protected by trade secret or copyright law.
+  ~ Dissemination of this information or reproduction of this material
+  ~ is strictly forbidden unless prior written permission is obtained
+  ~ from Adobe Systems Incorporated.
+  */-->
+
+<sly data-sly-use.page="com.adobe.cq.wcm.core.components.models.Page"
+     data-sly-list="${page.htmlPageItems}"><script data-sly-test="${item.location.name == 'footer'}"
+                                                   data-sly-element="${item.element.name @ context='unsafe'}" data-sly-attribute="${item.attributes}"></script>
+</sly>

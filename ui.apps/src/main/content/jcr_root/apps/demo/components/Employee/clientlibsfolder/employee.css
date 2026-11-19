@@ -1,0 +1,76 @@
+.employee-component {
+    background-color: #101010;
+    color: #e0e0e0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.employee-component__card {
+    background-color: #101010;
+    border: 1px solid #373737;
+    border-top: 2px solid #8bc900;
+    padding: 14px 12px 12px;
+    margin-bottom: 12px;
+}
+
+.employee-component__title {
+    color: #8bc900;
+    font-size: 11px;
+    font-weight: 600;
+    margin: 0 0 10px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #393939;
+}
+
+.employee-component__entry,
+.employee-component__fields {
+    margin: 0;
+    padding: 0;
+}
+
+.employee-component__field {
+    background-color: #1b1b1b;
+    border-left: 1px solid #8bc900;
+    margin-bottom: 5px;
+    padding: 9px 7px;
+    min-height: 26px;
+    box-sizing: border-box;
+}
+
+.employee-component__field dt {
+    font-size: 6px;
+    color: #c9c9c9;
+    font-weight: 400;
+    margin: 0 0 3px;
+}
+
+.employee-component__field dd {
+    font-size: 10px;
+    color: #e5e5e5;
+    margin: 0;
+}
+
+.employee-component__field--salary {
+    border: 1px solid #393939;
+    margin-bottom: 6px;
+    padding: 12px 10px;
+    min-height: 57px;
+}
+
+.employee-component__field--salary dt {
+    margin-bottom: 7px;
+}
+
+.employee-component__field--salary dd {
+    font-size: 14px;
+    font-weight: 600;
+    color: #8bc900;
+}
+
+.employee-component__field--last {
+    margin-bottom: 0;
+}
+
+.employee-component__field--email dd {
+    overflow-wrap: anywhere;
+}

@@ -1,0 +1,75 @@
+{
+  "logoText": "House of Flowers",
+  "logoAlt": "House of Flowers",
+  "logoImage": "",
+  "logoLink": "/content/demo/us/en/house-of-flowers",
+  "navItems": [
+    { "label": "Shop", "link": "/content/demo/us/en/house-of-flowers/shop", "opensMegaMenu": false },
+    { "label": "Collections", "link": "/content/demo/us/en/house-of-flowers/collections", "opensMegaMenu": false },
+    {
+      "label": "About",
+      "link": "/content/demo/us/en/house-of-flowers/about",
+      "opensMegaMenu": true,
+      "introHeadline": "Our atelier",
+      "introText": "House of Flowers is a vibrant atelier of master florists. We share a love of blooms and a passion for creating moments of beauty.",
+      "introCtaLabel": "Discover our atelier",
+      "introCtaLink": "/content/demo/us/en/house-of-flowers/about",
+      "featuredHeading": "Featured Content",
+      "megaColumns": [
+        {
+          "heading": "About Us",
+          "links": [
+            { "label": "Our Story", "link": "/content/demo/us/en/house-of-flowers/about" },
+            { "label": "The Atelier", "link": "/content/demo/us/en/house-of-flowers/about" },
+            { "label": "Master Florists", "link": "/content/demo/us/en/house-of-flowers/about" },
+            { "label": "Studios & Locations", "link": "/content/demo/us/en/house-of-flowers/contact" }
+          ]
+        },
+        {
+          "heading": "Our Craft",
+          "links": [
+            { "label": "Seasonal Collections", "link": "/content/demo/us/en/house-of-flowers/collections" },
+            { "label": "Wedding Design", "link": "/content/demo/us/en/house-of-flowers/occasions" },
+            { "label": "Private Events", "link": "/content/demo/us/en/house-of-flowers/occasions" },
+            { "label": "Care Guide", "link": "/content/demo/us/en/house-of-flowers/collections" }
+          ]
+        },
+        {
+          "heading": "Our Promise",
+          "links": [
+            { "label": "Sustainability Statement", "link": "/content/demo/us/en/house-of-flowers/sustainability" },
+            { "label": "Ethical Sourcing", "link": "/content/demo/us/en/house-of-flowers/sustainability" },
+            { "label": "Composting Program", "link": "/content/demo/us/en/house-of-flowers/sustainability" },
+            { "label": "Community Gardens", "link": "/content/demo/us/en/house-of-flowers/sustainability" }
+          ]
+        }
+      ],
+      "featuredCards": [
+        {
+          "title": "Seasonal Collections",
+          "image": "/etc.clientlibs/houseofflowers/components/header/clientlibs/resources/featured/seasonal.jpg",
+          "link": "/content/demo/us/en/house-of-flowers/collections",
+          "label": "Collection",
+          "alt": "Abundant seasonal bouquet of burgundy dahlias and blush roses"
+        },
+        {
+          "title": "Our Story",
+          "image": "/etc.clientlibs/houseofflowers/components/header/clientlibs/resources/featured/story.jpg",
+          "link": "/content/demo/us/en/house-of-flowers/about",
+          "label": "Story",
+          "alt": "Florist atelier workbench with ribbons, shears, and roses"
+        },
+        {
+          "title": "Sustainability Statement",
+          "image": "/etc.clientlibs/houseofflowers/components/header/clientlibs/resources/featured/sustainability.jpg",
+          "link": "/content/demo/us/en/house-of-flowers/sustainability",
+          "label": "Promise",
+          "alt": "Cutting garden of peonies, sage, and lavender at golden hour"
+        }
+      ]
+    },
+    { "label": "Sustainability", "link": "/content/demo/us/en/house-of-flowers/sustainability", "opensMegaMenu": false },
+    { "label": "Occasions", "link": "/content/demo/us/en/house-of-flowers/occasions", "opensMegaMenu": false },
+    { "label": "Contact", "link": "/content/demo/us/en/house-of-flowers/contact", "opensMegaMenu": false }
+  ]
+}

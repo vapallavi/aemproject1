@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:description="Authorable House of Flowers mega-menu header. Logo, navigation, mega-menu sections, and featured cards are configured in the dialog."
+    jcr:primaryType="cq:Component"
+    jcr:title="House of Flowers Header"
+    componentGroup="Demo-Content"/>

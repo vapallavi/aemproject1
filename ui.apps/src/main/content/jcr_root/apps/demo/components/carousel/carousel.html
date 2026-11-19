@@ -1,0 +1,24 @@
+<sly data-sly-use.model="com.adobe.aem.guides.demo.core.models.CarouselModel"/>
+<sly data-sly-test="${model.slides}">
+
+<div class="hof-wrapper">
+    <div class="hof-row">
+        <button type="button" class="hof-arrow hof-arrow--prev" aria-label="Previous products" disabled></button>
+        <div class="hof-item" data-sly-list.slide="${model.slides}">
+            <div class="hof-card">
+                <div class="hof-image">
+                    <img class="hof-img" src="${slide.path @ context='uri'}" alt="${slide.title}"/>
+                </div>
+                <div class="hof-info">
+                    <h3>${slide.title}</h3>
+                    <ul data-sly-list.tag="${slide.tags}">
+                        <li class="hof-price" data-sly-test="${tag.text}">${tag.text}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="hof-arrow hof-arrow--next" aria-label="Next products"></button>
+    </div>
+</div>
+
+</sly>

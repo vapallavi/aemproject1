@@ -1,0 +1,5 @@
+{
+  "scripts": [
+    "delete user region-tree-service\ncreate service user region-tree-service with path system/region-tree-service\ncreate path (sling:Folder) /conf/region-tree\ncreate path (sling:Folder) /conf/region-tree/actual\nset ACL for region-tree-service\n  allow jcr:read,jcr:write,jcr:nodeTypeManagement on /conf/region-tree\nend"
+  ]
+}

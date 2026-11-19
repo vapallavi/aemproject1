@@ -1,0 +1,23 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='demo.contactform'}"/>
+
+<div class="contact-form" data-sly-use.model="com.adobe.aem.guides.demo.core.models.ContactFormModel">
+  <h2 class="contact-form__title">${model.editMode ? 'Edit Task 9' : 'Task 9'}</h2>
+
+  <form id="contactForm" class="contact-form__form" onsubmit="return false;">
+    <input type="hidden" id="editPath" name="editPath" value="${model.editPath @ context='attribute'}"/>
+
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" value="${model.name @ context='attribute'}" required/>
+
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" value="${model.email @ context='attribute'}" required/>
+
+    <label for="mobile">Mobile</label>
+    <input type="tel" name="mobile" id="mobile" value="${model.mobile @ context='attribute'}" required/>
+
+    <button type="button" class="contact-form__submit" onclick="submitContactForm()">
+      ${model.editMode ? 'Update' : 'Submit'}
+    </button>
+  </form>
+</div>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>House of Flowers — Header preview</title>
+    <link rel="stylesheet" href="../ui.apps/src/main/content/jcr_root/apps/houseofflowers/components/header/clientlibs/css/header.css"/>
+    <style>
+        html, body { margin: 0; background: #f7f1ea; color: #3a2a32; font-family: Montserrat, "Segoe UI", sans-serif; }
+        .page-body { max-width: 76rem; margin: 0 auto; padding: 3rem 1.75rem 6rem; }
+        .page-body h1 { font-family: "Playfair Display", Georgia, serif; font-weight: 500; font-size: 2.4rem; margin: 0 0 0.75rem; }
+        .page-body p { max-width: 38rem; line-height: 1.65; color: #6b5560; }
+    </style>
+</head>
+<body>
+<header class="hof-header" data-hof-header="true">
+    <div class="hof-header__bar">
+        <div class="hof-header__inner">
+            <button type="button" class="hof-header__menu-toggle" data-hof-menu-toggle aria-expanded="false" aria-controls="hof-nav" aria-label="Open menu">
+                <svg class="hof-header__icon-open" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M4.5 7h15M4.5 12h15M4.5 17h15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+                <svg class="hof-header__icon-close" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M6.5 6.5l11 11M17.5 6.5l-11 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <a class="hof-header__brand" href="#home">
+                <span class="hof-header__mark" aria-hidden="true">
+                    <svg viewBox="0 0 48 48" focusable="false">
+                        <circle cx="24" cy="24" r="22.5" fill="none" stroke="currentColor" stroke-width="1" opacity="0.55"/>
+                        <g fill="none" stroke="currentColor" stroke-width="1.35">
+                            <ellipse cx="24" cy="13.2" rx="3.5" ry="6.6"/>
+                            <ellipse cx="24" cy="13.2" rx="3.5" ry="6.6" transform="rotate(72 24 24)"/>
+                            <ellipse cx="24" cy="13.2" rx="3.5" ry="6.6" transform="rotate(144 24 24)"/>
+                            <ellipse cx="24" cy="13.2" rx="3.5" ry="6.6" transform="rotate(216 24 24)"/>
+                            <ellipse cx="24" cy="13.2" rx="3.5" ry="6.6" transform="rotate(288 24 24)"/>
+                        </g>
+                        <circle cx="24" cy="24" r="3" fill="currentColor" opacity="0.9"/>
+                    </svg>
+                </span>
+                <span class="hof-header__wordmark">House of Flowers</span>
+            </a>
+            <nav class="hof-header__nav" id="hof-nav" aria-label="Primary" data-hof-nav>
+                <ul class="hof-header__menu">
+                    <li class="hof-header__item"><a class="hof-header__link" href="#shop"><span class="hof-header__anchor-label">Shop</span></a></li>
+                    <li class="hof-header__item"><a class="hof-header__link" href="#collections"><span class="hof-header__anchor-label">Collections</span></a></li>
+                    <li class="hof-header__item hof-header__item--mega" data-hof-mega-item="true">
+                        <button type="button" class="hof-header__link hof-header__link--mega" data-hof-mega-trigger aria-expanded="false" aria-haspopup="true" aria-controls="hof-mega">
+                            <span class="hof-header__anchor-label">About</span>
+                            <svg class="hof-header__caret-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                                <path d="M4 6.2L8 10.2 12 6.2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="hof-header__mega" id="hof-mega" role="region" aria-label="About menu" aria-hidden="true">
+                            <div class="hof-header__mega-inner">
+                                <div class="hof-header__intro">
+                                    <p class="hof-header__intro-headline">Our atelier</p>
+                                    <p class="hof-header__intro-text">House of Flowers is a vibrant atelier of master florists. We share a love of blooms and a passion for creating moments of beauty.</p>
+                                    <a class="hof-header__intro-cta" href="#about">
+                                        <span>Discover our atelier</span>
+                                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                            <path d="M5 12h12M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="hof-header__columns">
+                                    <div class="hof-header__column">
+                                        <h3 class="hof-header__column-title">About Us</h3>
+                                        <ul class="hof-header__column-list">
+                                            <li><a class="hof-header__column-link" href="#about-story">Our Story</a></li>
+                                            <li><a class="hof-header__column-link" href="#about-atelier">The Atelier</a></li>
+                                            <li><a class="hof-header__column-link" href="#about-florists">Master Florists</a></li>
+                                            <li><a class="hof-header__column-link" href="#about-locations">Studios &amp; Locations</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="hof-header__column">
+                                        <h3 class="hof-header__column-title">Our Craft</h3>
+                                        <ul class="hof-header__column-list">
+                                            <li><a class="hof-header__column-link" href="#collections-seasonal">Seasonal Collections</a></li>
+                                            <li><a class="hof-header__column-link" href="#collections-weddings">Wedding Design</a></li>
+                                            <li><a class="hof-header__column-link" href="#collections-events">Private Events</a></li>
+                                            <li><a class="hof-header__column-link" href="#collections-care">Care Guide</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="hof-header__column">
+                                        <h3 class="hof-header__column-title">Our Promise</h3>
+                                        <ul class="hof-header__column-list">
+                                            <li><a class="hof-header__column-link" href="#sustainability-statement">Sustainability Statement</a></li>
+                                            <li><a class="hof-header__column-link" href="#sustainability-sourcing">Ethical Sourcing</a></li>
+                                            <li><a class="hof-header__column-link" href="#sustainability-compost">Composting Program</a></li>
+                                            <li><a class="hof-header__column-link" href="#sustainability-community">Community Gardens</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="hof-header__featured">
+                                    <h3 class="hof-header__featured-title">Featured Content</h3>
+                                    <ul class="hof-header__featured-list">
+                                        <li>
+                                            <a class="hof-header__card" href="#collections-seasonal">
+                                                <span class="hof-header__card-media">
+                                                    <img src="../ui.apps/src/main/content/jcr_root/apps/houseofflowers/components/header/clientlibs/resources/featured/seasonal.jpg" alt="Abundant seasonal bouquet of burgundy dahlias and blush roses" width="480" height="270"/>
+                                                </span>
+                                                <span class="hof-header__card-kicker">Collection</span>
+                                                <span class="hof-header__card-title">Seasonal Collections</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="hof-header__card" href="#about-story">
+                                                <span class="hof-header__card-media">
+                                                    <img src="../ui.apps/src/main/content/jcr_root/apps/houseofflowers/components/header/clientlibs/resources/featured/story.jpg" alt="Florist atelier workbench with ribbons, shears, and roses" width="480" height="270"/>
+                                                </span>
+                                                <span class="hof-header__card-kicker">Story</span>
+                                                <span class="hof-header__card-title">Our Story</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="hof-header__card" href="#sustainability-statement">
+                                                <span class="hof-header__card-media">
+                                                    <img src="../ui.apps/src/main/content/jcr_root/apps/houseofflowers/components/header/clientlibs/resources/featured/sustainability.jpg" alt="Cutting garden of peonies, sage, and lavender at golden hour" width="480" height="270"/>
+                                                </span>
+                                                <span class="hof-header__card-kicker">Promise</span>
+                                                <span class="hof-header__card-title">Sustainability Statement</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="hof-header__item"><a class="hof-header__link" href="#sustainability"><span class="hof-header__anchor-label">Sustainability</span></a></li>
+                    <li class="hof-header__item"><a class="hof-header__link" href="#occasions"><span class="hof-header__anchor-label">Occasions</span></a></li>
+                    <li class="hof-header__item"><a class="hof-header__link" href="#contact"><span class="hof-header__anchor-label">Contact</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<main class="page-body">
+    <h1>An atelier of living sculpture</h1>
+    <p>Hover About to open the mega-menu. On a narrow viewport the plum bar collapses into a hamburger with an accordion for About.</p>
+</main>
+<script src="../ui.apps/src/main/content/jcr_root/apps/houseofflowers/components/header/clientlibs/js/header.js"></script>
+<script>
+    (function () {
+        var params = new URLSearchParams(window.location.search);
+        var header = document.querySelector("[data-hof-header]");
+        if (!header) {
+            return;
+        }
+        if (params.get("mega") === "1") {
+            var item = header.querySelector("[data-hof-mega-item]");
+            var trigger = header.querySelector("[data-hof-mega-trigger]");
+            var panel = header.querySelector(".hof-header__mega");
+            if (item) {
+                item.classList.add("is-open");
+            }
+            if (trigger) {
+                trigger.setAttribute("aria-expanded", "true");
+            }
+            if (panel) {
+                panel.setAttribute("aria-hidden", "false");
+            }
+        }
+        if (params.get("mobile") === "1") {
+            var nav = header.querySelector("[data-hof-nav]");
+            var menuToggle = header.querySelector("[data-hof-menu-toggle]");
+            if (nav) {
+                nav.classList.add("is-open");
+            }
+            if (menuToggle) {
+                menuToggle.setAttribute("aria-expanded", "true");
+                menuToggle.setAttribute("aria-label", "Close menu");
+            }
+        }
+    }());
+</script>
+</body>
+</html>
+
